@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Growth | Business Model</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --primary: #1f5eff;
+        --primary-dark: #163eb8;
+        --text: #172033;
+        --muted: #5d6985;
+        --line: #e8edf8;
+        --shadow: 0 18px 50px rgba(22, 54, 123, 0.12);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a { text-decoration: none; }
+      .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+      header {
+        position: sticky; top: 0; z-index: 10;
+        background: rgba(245, 247, 251, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(23, 32, 51, 0.05);
+      }
+      .nav {
+        display: flex; justify-content: space-between; align-items: center; padding: 18px 0;
+      }
+      .brand { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.04em; }
+      .brand span { color: var(--primary); }
+      nav { display: flex; gap: 26px; align-items: center; }
+      nav a { color: var(--muted); font-size: 0.96rem; font-weight: 600; }
+      .nav-cta {
+        background: var(--primary); color: white; border-radius: 999px; padding: 12px 18px; font-weight: 700;
+        box-shadow: var(--shadow);
+      }
+      .hero { padding: 72px 0 50px; }
+      .hero-grid {
+        display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 34px; align-items: center;
+      }
+      .eyebrow {
+        display: inline-block; padding: 8px 14px; background: rgba(31, 94, 255, 0.08);
+        color: var(--primary-dark); border-radius: 999px; font-weight: 700; font-size: 0.78rem;
+        letter-spacing: 0.06em; text-transform: uppercase;
+      }
+      h1 {
+        margin: 20px 0 18px; font-size: clamp(2.5rem, 4vw, 5rem); line-height: 1.02; letter-spacing: -0.05em;
+      }
+      .lead {
+        font-size: 1.1rem; max-width: 640px; color: var(--muted); margin-bottom: 28px;
+      }
+      .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+      .button {
+        display: inline-flex; align-items: center; justify-content: center; padding: 14px 22px; border-radius: 999px;
+        font-weight: 700; transition: 0.2s ease;
+      }
+      .button.primary { background: var(--primary); color: #fff; }
+      .button.secondary { background: #fff; color: var(--text); border: 1px solid var(--line); }
+      .metrics { display: flex; gap: 30px; flex-wrap: wrap; }
+      .metric { min-width: 120px; }
+      .metric strong { display: block; font-size: 1.8rem; letter-spacing: -0.04em; }
+      .metric span { color: var(--muted); font-size: 0.9rem; }
+      .hero-card {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); padding: 26px;
+      }
+      .mini-grid {
+        display: grid; grid-template-columns: repeat(2, minmax(150px, 1fr)); gap: 16px; margin-top: 16px;
+      }
+      .mini-box {
+        background: linear-gradient(180deg, #f6f9ff 0%, #edf4ff 100%); border: 1px solid var(--line); border-radius: 18px; padding: 18px 16px;
+      }
+      .mini-box .tag {
+        color: var(--primary); font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+      }
+      .mini-box strong { display: block; margin-top: 8px; font-size: 1.4rem; letter-spacing: -0.04em; }
+      .section { padding: 60px 0; }
+      .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
+      .section-header h2 { margin: 0 0 12px; font-size: clamp(2rem, 3vw, 3rem); letter-spacing: -0.05em; }
+      .section-header p { margin: 0; color: var(--muted); }
+      .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+      .card {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 24px 20px; box-shadow: 0 10px 25px rgba(16, 31, 52, 0.04);
+      }
+      .card h3 { margin: 12px 0 10px; font-size: 1.2rem; }
+      .card p { margin: 0; color: var(--muted); }
+      .icon {
+        width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center; border-radius: 14px; background: rgba(31, 94, 255, 0.08); color: var(--primary); font-weight: 800; font-size: 1.2rem;
+      }
+      .canvas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+      .canvas-item { background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 24px; }
+      .canvas-item h3 { margin-top: 0; margin-bottom: 14px; }
+      ul { list-style: none; padding: 0; margin: 0; }
+      li { padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+      li:last-child { border-bottom: none; }
+      .cta {
+        background: linear-gradient(135deg, #11275c 0%, #1f5eff 100%); color: white; border-radius: 28px; padding: 34px 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+      }
+      .cta h3 { margin: 0 0 8px; font-size: clamp(1.8rem, 2vw, 2.3rem); letter-spacing: -0.04em; }
+      .cta p { margin: 0; color: rgba(255,255,255,0.8); }
+      footer { padding: 26px 0 60px; color: var(--muted); text-align: center; }
+      @media (max-width: 860px) {
+        .hero-grid, .cards, .canvas, .cta { grid-template-columns: 1fr; display: grid; }
+        nav { display: none; }
+        .hero { padding-top: 44px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">Northstar <span>Growth</span></div>
+        <nav>
+          <a href="#model">Model</a>
+          <a href="#revenue">Revenue</a>
+          <a href="#customers">Customers</a>
+          <a href="#strategy">Strategy</a>
+          <a class="nav-cta" href="#contact">Book a Call</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Business model snapshot</span>
+            <h1>Turn expertise into recurring growth.</h1>
+            <p class="lead">
+              We help B2B brands scale through a simple model: high-value services,
+              productized offers, and long-term customer retention. The result is a
+              predictable pipeline and sustainable revenue.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#model">See the model</a>
+              <a class="button secondary" href="#contact">Talk to us</a>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <strong>3x</strong>
+                <span>faster sales cycles</span>
+              </div>
+              <div class="metric">
+                <strong>42%</strong>
+                <span>retainer growth</span>
+              </div>
+              <div class="metric">
+                <strong>9 mo.</strong>
+                <span>average payback</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="mini-grid">
+              <div class="mini-box">
+                <div class="tag">Segments</div>
+                <strong>SMB</strong>
+              </div>
+              <div class="mini-box">
+                <div class="tag">Offer</div>
+                <strong>Growth OS</strong>
+              </div>
+              <div class="mini-box">
+                <div class="tag">Revenue</div>
+                <strong>Retainers</strong>
+              </div>
+              <div class="mini-box">
+                <div class="tag">Scale</div>
+                <strong>Templates</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="model" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>How the business works</h2>
+            <p>
+              A lean operating model that mixes advisory services, repeatable programs,
+              and digital products to create value for both customers and the company.
+            </p>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <div class="icon">01</div>
+              <h3>Customer Segments</h3>
+              <p>Small and mid-sized businesses with a clear need for pipeline growth, brand clarity, and digital execution.</p>
+            </div>
+            <div class="card">
+              <div class="icon">02</div>
+              <h3>Value Proposition</h3>
+              <p>We turn fragmented marketing into a repeatable revenue engine with measurable business impact.</p>
+            </div>
+            <div class="card">
+              <div class="icon">03</div>
+              <h3>Channels</h3>
+              <p>Organic content, outbound sales, strategic partnerships, and founder-led social proof.</p>
+            </div>
+            <div class="card">
+              <div class="icon">04</div>
+              <h3>Key Activities</h3>
+              <p>Offer strategy, messaging, funnel design, lead generation, campaign optimization, and reporting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="revenue" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Revenue structure</h2>
+            <p>Multiple streams create stability and make growth more resilient.</p>
+          </div>
+
+          <div class="canvas">
+            <div class="canvas-item">
+              <h3>Revenue Streams</h3>
+              <ul>
+                <li>Monthly retainers for strategy and execution</li>
+                <li>One-off implementation projects and audits</li>
+                <li>Digital templates and sales playbooks</li>
+                <li>Performance-based consulting add-ons</li>
+              </ul>
+            </div>
+
+            <div class="canvas-item">
+              <h3>Cost Structure</h3>
+              <ul>
+                <li>Team compensation and specialist contractors</li>
+                <li>Marketing and sales software stack</li>
+                <li>Content production and design tools</li>
+                <li>Partnerships, events, and customer acquisition</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="customers" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Why customers buy</h2>
+            <p>Value is created through clarity, speed, and measurable outcomes.</p>
+          </div>
+
+          <div class="canvas">
+            <div class="canvas-item">
+              <h3>Customer Pain Points</h3>
+              <ul>
+                <li>Low conversion from traffic and weak positioning</li>
+                <li>Inconsistent sales process and delayed follow-up</li>
+                <li>Lack of internal marketing expertise</li>
+                <li>Pressure to grow without expanding headcount</li>
+              </ul>
+            </div>
+
+            <div class="canvas-item">
+              <h3>Core Differentiators</h3>
+              <ul>
+                <li>Clear strategic direction and execution roadmap</li>
+                <li>Simple, measurable KPIs tied to revenue</li>
+                <li>Transparent communication and reporting cadence</li>
+                <li>Built for repeatability, not one-off campaigns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="strategy" class="section">
+        <div class="container">
+          <div class="cta" id="contact">
+            <div>
+              <h3>Build a business model that scales.</h3>
+              <p>Start with a repeatable offer, a clear customer promise, and a lean growth engine.</p>
+            </div>
+            <a class="button secondary" href="mailto:hello@northstargrowth.com">hello@northstargrowth.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 Northstar Growth. Built for sustainable business growth.</div>
+    </footer>
+  </body>
+</html>
